@@ -42,7 +42,7 @@ def certifications():
 
     certificates = [
         {'credential': 'https://www.hackerrank.com/certificates/58d066424a1e',
-         'src': 'static/certificates/C Advanced.png',
+         'src': 'static/certificates/C Advanced.jpg',
          'title': 'C Advanced'},
         {'credential': 'https://www.hackerrank.com/certificates/0c61249bbe1d',
             'src': 'static/certificates/C Basic.png',
