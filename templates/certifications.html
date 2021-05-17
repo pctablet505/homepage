@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}
+Certifications
+{% endblock %}
+{% block main %}
+<hr>
+<h1 class="text-center">My Certificates</h1>
+<hr>
+<div class="bordered" style="padding:45px;">
+    <div class="row">
+        {% for ind in range(certificates.__len__()) %}
+
+
+
+        <div class="col-md-3 col-lg-3 col-xs6 ">
+            <div class="thumbnail">
+                <a href={{certificates[ind]['credential']}}>
+                    <img src="{{certificates[ind]['src']}}" alt="{{certificates[ind]['title']}}" style="width:100%">
+                    <div class="caption">
+                        <p>{{certificates[ind]['title']}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+
+        {%endfor%}
+    </div>
+</div>
+
+{% endblock %}

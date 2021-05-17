@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block title %}
+Hobbies
+{% endblock %}
+{% block body %}
+
+<!-- <div class="navbar  navbar-dark bg-dark" style="position: fixed;">
+    <a class=" nav-item active" href="#tabla">Tabla Playing</a>
+    <a clsss="nav-item" href="#digital_arts">Digital Arts</a>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; width:100%">
+    <div class="container-fluid">
+        <div class="collapse navbar-expand-lg" id="navbarNav"></div>
+
+        <a class="nav-item active" href="#tabla">Tabla Playing</a>
+
+        <a class="nav-item active" href="#digital_arts">Digital Arts</a>
+
+    </div>
+    </div>
+</nav>
+
+<div class="container" style="width:fit-content">
+    <h1 style="margin-top: 50px;">My Hobbies</h1>
+
+    <div id="tabla" class="bordered">
+        <h2 class="underlined">
+            Tabla Playing
+        </h2>
+        <p>
+            In my spare time I play tabla.
+            Sometimes its nice, sometimes its irratating for others, but I enjoy it.
+
+        </p>
+        <div>
+            <h4>This is the video of my first stage performance.</h6>
+                <p>I was excited that day. I never hopped that it will happen. It happend all of a sudden.</p>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9RDEJpSnKuM"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div id="digital_arts" class="bordered">
+        <h2 class="underlined">
+            <span>DigitalArts</span>
+        </h2>
+        <p>
+            Sometimes I do digital sketching. I was earlier fond of this.
+            I did a lot of drawings in my childhood. But when I joined high school I stopped all these things due to
+            lack of
+            time.
+            Then when I joined college, in first year there used to be a lot of free time.
+            We didn't have any stress or worries for studies ans we only had 3 subjects.
+            I began this with one note, and then I ended doing these things in Art Rage 5.
+            Somebody was motivation for me, so I drew about 19 sketches of that person. The initial ones
+            were not so good, but the latter ones were awesome. But I now regret wasting my art
+            on such person. I wasted about 80-90 hrs total drawing those which I had to delete.
+        </p>
+        <h3>Heres an old sample of it.</h3>
+        <img src='static/sketch.jpg' alt="my own sketch" style="max-width:fit-content">
+    </div>
+</div>
+
+
+
+{% endblock %}
