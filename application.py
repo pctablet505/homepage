@@ -9,6 +9,7 @@ for x in files:
     if len(x) >= 5 and x[-5:] == '.html':
         if x != 'layout.html':
             routes.append(x[:-5])
+routes.sort()
 
 
 @app.route('/')
