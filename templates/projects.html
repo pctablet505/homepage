@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+Projects
+{% endblock %}
+{% block main%}
+<ol>
+    {% for project in projects%}
+    <li>
+        <h2>{{project['title']}}</h2>
+        <dl>
+            <dt>Description</dt>
+            <dd>{{project['description']}}</dd>
+            {% if project['demonstration']!='' %}
+            <dt>Demonstration</dt>
+            <dd><a href="{{project['demonstration']}}">{{project['demonstration']}}</a></dd>
+            {%endif%}
+            <dt>Source Codes</dt>
+            <dd><a href="{{project['code']}}">{{project['code']}}</a></dd>
+        </dl>
+    </li>
+    <hr>
+
+    {%endfor%}
+</ol>
+
+{%endblock%}
