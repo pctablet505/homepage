@@ -4,6 +4,10 @@
 {% endblock %}
 
 {% block main %}
+    <button id="download" onclick="window.open('{{ url_for('static',filename='resume.pdf') }}','_blank')"
+    class="btn btn-primary">
+        Download Resume
+    </button>
     <h1 style="font-size: 1in">Rahul Kumar</h1>
     <div class="resume">
 
