@@ -137,4 +137,12 @@
         <h1>Certifications</h1>
         <h3><a href="certifications">Click to see my certifications</a></h3>
     </div>
+    <div class="resume">
+        <h1>Hobbies</h1>
+        <ul >
+            {% for hobby in hobbies %}
+            <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
