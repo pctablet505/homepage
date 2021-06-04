@@ -5,16 +5,16 @@
 
 {% block main %}
     <button id="download" onclick="window.open('{{ url_for('static',filename='resume.pdf') }}','_blank')"
-    class="btn btn-primary">
+            class="btn btn-primary">
         Download Resume
     </button>
-    <h1 style="font-size: 1in">Rahul Kumar</h1>
+    <h1 style="font-size: 1in; font-family: Bahnschrift">Rahul Kumar</h1>
     <div class="resume">
 
         <h1>About</h1>
         <p>
             <img src="/static/me/3.jpg"
-                 style="border:3px solid black; border-radius: 150px; width:150px; height:150px; float:right;margin-right: 200px;">
+                 style="border:3px solid black; border-radius: 200px; width:200px; height:200px; float:right;margin-right: 100px;">
 
             I am a Computer Science engineering student from <a href="https://www.bitsindri.ac.in" target="_blank">BIT_Sindri</a>.<br>
             Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
@@ -43,6 +43,7 @@
                 </li>
             {% endfor %}
         </ul>
+        <hr>
     </div>
 
 
@@ -93,14 +94,15 @@
             </tr>
             </tbody>
         </table>
+        <hr>
     </div>
-    <div class="container" style="margin-left: 0">
-        <div class="row bordered">
 
+    <div class="container-fluid">
+        <div class="row">
             <div class="col">
                 <div class="resume">
                     <h1>Skills</h1>
-                    <ol>
+                    <ol class="content1">
                         {% for skill in skills %}
                             <li>{{ skill }}</li>
                             <ul class="skills">
@@ -115,47 +117,57 @@
             </div>
             <div class="col">
                 <div class="resume">
-                    <h1>Projects</h1>
-                    <ol>
-                        {% for project in projects %}
+                    <h1>Achievements</h1>
+                    <ol class="list-group">
+                        {% for achievement in achievements %}
                             <li>
-
-                                <a href="{{ project['code'] }}">{{ project['title'] }}</a>
+                                <dt>{{ achievement.achievement }}</dt>
+                                <dd> {{ achievement.description }}
+                                    {% if achievement.link %}
+                                        <a href="{{ achievement.link }}">Visit</a>
+                                    {% endif %}
+                                </dd>
 
                             </li>
-
-
                         {% endfor %}
                     </ol>
                 </div>
             </div>
         </div>
-
-
-    </div>
+        <hr>
     </div>
 
 
 
-    <div class="resume">
-        <h1>Achievements</h1>
-        <ol class="list-group">
-            {% for achievement in achievements %}
-                <li>
-                    <dt>{{ achievement.achievement }}</dt>
-                    <dd> {{ achievement.description }}
-                        {% if achievement.link %}
-                            <a href="{{ achievement.link }}">Visit</a>
-                        {% endif %}
-                    </dd>
 
-                </li>
-            {% endfor %}
-        </ol>
-    </div>
+
+
+
     <div class="resume">
         <h1>Certifications</h1>
-        <h3><a href="certifications">Click to see my certifications</a></h3>
+
+        <ul class="content3 ">
+            {% for certificate in certificates %}
+                <li><a href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
+            {% endfor %}
+        </ul>
+        <hr>
+
+    </div>
+    <div class="resume">
+        <h1>Projects</h1>
+        <ol class="content2 ">
+            {% for project in projects %}
+                <li>
+
+                    <a href="{{ project['code'] }}">{{ project['title'] }}</a>
+
+                </li>
+
+
+            {% endfor %}
+        </ol>
+        <hr>
     </div>
     <div class="resume">
         <h1>Hobbies</h1>
@@ -165,4 +177,5 @@
             {% endfor %}
         </ul>
     </div>
+
 {% endblock %}
