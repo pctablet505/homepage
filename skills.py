@@ -1,0 +1,28 @@
+from collections import defaultdict
+
+skills = defaultdict(list,
+                     {'Advance Data Structures': [],
+                      'Algorithms': [],
+                      'Artificial Intelligence': [],
+                      'Machine Learning': ['Clustering',
+                                           'Recommendation',
+                                           'TensorFlow',
+                                           'PyTorch',
+                                           'Scikit-Learn',
+                                           'Data visualization'],
+                      'Languages': ['Python',
+                                    'C',
+                                    'C++',
+                                    'JavaScript',
+                                    ],
+                      'Web Programming': ['HTML',
+                                          'CSS',
+                                          'Flask',
+                                          'Django',
+                                          'Saas',
+                                          'Bootstrap'],
+                      'Arduino': [],
+                      'Statistics': [],
+                      'Competitive Programming': [],
+
+                      })

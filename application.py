@@ -1,5 +1,8 @@
 import os
 from flask import Flask, render_template, redirect
+from certificates import certificates
+from projects_list import projects_list
+from skills import skills
 
 app = Flask(__name__)
 
@@ -37,7 +40,6 @@ def contact():
 
 @app.route('/certifications')
 def certifications():
-    from certificates import certificates
     certificates.sort(key=lambda x: x.title)
 
     return render_template('certifications.html', routes=routes, certificates=certificates)
@@ -45,8 +47,6 @@ def certifications():
 
 @app.route('/projects')
 def projects():
-    from projects_list import projects_list
-
     return render_template('projects.html', routes=routes, projects=projects_list)
 
 
@@ -58,3 +58,8 @@ def home():
 @app.route('/<name>')
 def route(name):
     return render_template(f'{name}.html', routes=routes)
+
+
+@app.route('/resume')
+def resume():
+    return render_template('resume.html', routes=routes, skills=skills, projects=projects_list)

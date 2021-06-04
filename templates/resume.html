@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+{% block title %}
+    Projects
+{% endblock %}
+{% block main %}
+    <div class="resume">
+        <h1>Skills</h1>
+        <ol>
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+                <ul class="skills">
+                    {% for sub_skill in skills[skill] %}
+                        <li>{{ sub_skill }}</li>
+                    {% endfor %}
+                </ul>
+
+            {% endfor %}
+        </ol>
+    </div>
+    <div class="resume">
+        <table class="table table-striped table-bordered" style="margin-left:auto; margin-top:39px;">
+
+            <thead class="thead text-center" style="font-size:large">
+            <th scope="col">Institution</th>
+            <th scope="col">Education</th>
+            <th scope="col">Year</th>
+            </thead>
+            <tbody>
+            <tr>
+
+                <td><a href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a></td>
+                <td><a href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
+                       target="_blank">B.Tech Computer Science</a></td>
+                <td>2018-2022</td>
+            </tr>
+            <tr>
+                <td><a href="https://micromasters.mit.edu/" target="_blank">MITx</a></td>
+                <td><a href=https://micromasters.mit.edu/ds/ target="_blank">Micro Masters in Statitics and Data
+                    Science</a></td>
+                <td>2021-2022</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh Public School</a></td>
+                <td>Higher Secondary Education</td>
+                <td>2015-2017</td>
+            </tr>
+            <tr>
+                <td><a href="http://www.arspublicschool.com" target="_blank">ARS Public School</a></td>
+                <td>
+                    <ul>
+
+                        <li>High School</li>
+                        <li>Middle School</li>
+
+                    </ul>
+                </td>
+                <td>2008-2015</td>
+            </tr>
+            <tr>
+                <td> Sharswati Sishu Vidya Mandir</td>
+                <td>Elementary School</td>
+                <td>2005-2008</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="resume">
+    <h1>Projects</h1>
+        <ol>
+            {% for project in projects %}
+                <li>
+                    {{ project['title'] }}
+{#                    <dl>#}
+{#                        <dt>Description</dt>#}
+{#                        <dd>{{ project['description'] }}</dd>#}
+{#                        {% if project['demonstration']!='' %}#}
+{#                            <dt>Demonstration</dt>#}
+{#                            <dd><a href="{{ project['demonstration'] }}">{{ project['demonstration'] }}</a></dd>#}
+{#                        {% endif %}#}
+{#                        <dt>Source Codes</dt>#}
+{#                        <dd><a href="{{ project['code'] }}">{{ project['code'] }}</a></dd>#}
+{#                    </dl>#}
+                </li>
+                
+
+            {% endfor %}
+        </ol>
+    </div>
+
+{% endblock %}
