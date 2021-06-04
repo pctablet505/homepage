@@ -3,6 +3,8 @@ from flask import Flask, render_template, redirect
 from certificates import certificates
 from projects_list import projects_list
 from skills import skills
+from contacts import contacts
+from achievements import achievements as achievements_list
 
 app = Flask(__name__)
 
@@ -27,14 +29,6 @@ def index():
 
 @app.route('/contact')
 def contact():
-    contacts = {
-        'Mail': ('pctablet505@gmail.com', 'mailto:pctablet505@gmail.com'),
-        'Phone': ('+91 8709253658', 'tel:+91 8709253658'),
-        'LinkedIn': ('@pctablet505', 'https://www.linkedin.com/in/pctablet505'),
-        'Hackerrank': ('@pctablet505', 'https://www.hackerrank.com/pctablet505'),
-        'GitHub': ('@pctablet505', 'https://www.github.com/pctablet505'),
-        'Instagram': ('pctablet505', 'https://www.instagram.com/pctablet505'),
-    }
     return render_template('contact.html', routes=routes, contacts=contacts)
 
 
@@ -55,6 +49,11 @@ def home():
     return redirect('/')
 
 
+@app.route('/achievements')
+def achievements():
+    return render_template('achievements.html', routes=routes, achievements=achievements_list)
+
+
 @app.route('/<name>')
 def route(name):
     return render_template(f'{name}.html', routes=routes)
@@ -62,4 +61,5 @@ def route(name):
 
 @app.route('/resume')
 def resume():
-    return render_template('resume.html', routes=routes, skills=skills, projects=projects_list)
+    return render_template('resume.html', routes=routes, skills=skills, projects=projects_list, contacts=contacts,
+                           achievements=achievements_list)

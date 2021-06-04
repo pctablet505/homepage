@@ -1,0 +1,40 @@
+from collections import namedtuple
+
+Achievement = namedtuple(
+    'Achievement', ['achievement', 'description', 'link'])
+achievements = [
+    Achievement('World Programming Championship - IIT Mumbai',
+                'Rank 69 | Certificate no 99695',
+                ''),
+    Achievement('Gold in HackFest 2020',
+                '''Rank 29 | 8051
+            Rating 2042.08 from 1500''',
+                'https://www.hackerrank.com/reslits/hackerrank-hackfest-2020/pctablet505'),
+    Achievement('Gate 2021',
+                '''Got AIR 5648''',
+                ''),
+    Achievement('CodeVita Season 9',
+                '''Cleared Round 1''',
+                ''),
+    Achievement('CodeVita Season 9',
+                '''Got AIR 242 in Round 2''',
+                ''),
+    Achievement('Hack the Interview III',
+                '''Rank(73 | 919)''',
+                'https://www.hackerrank.com/reslits/hack-the-interview-iv/pctablet505'),
+    Achievement('Hack the Interview IV (Asia Pacific)',
+                '''Rank(100 | 4353)''',
+                'https://www.hackerrank.com/reslits/hack-the-interview-iv-apac/pctablet505'),
+    Achievement('Hack the Interview IV (U.S.) ',
+                '''Rank( 65 | 1217) ''',
+                'https://www.hackerrank.com/reslits/hack-the-interview-iv/pctablet505?h_r=profile'),
+    Achievement('Hackerrank Algorithms',
+                '''Rank 815/ 2219538''',
+                'https://www.hackerrank.com/leaderboard?filter=pctablet505&filter_on=hacker&page=1&track=algorithms&type=practice'),
+    Achievement('Hackerrank Data Structures ',
+                '''Rank 169| 931788''',
+                'https://www.hackerrank.com/leaderboard?filter=pctablet505&filter_on=hacker&page=1&track=data-structures&type=practice'),
+    Achievement('Hackerrank Python Practice',
+                '''Rank 1''',
+                'https://www.hackerrank.com/leaderboard?filter=pctablet505&filter_on=hacker&page=1&track=python&type=practice'),
+]

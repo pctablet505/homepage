@@ -32,8 +32,20 @@ ul{
     text-align: left;
 
 }
+.resume ul{
+    text-align: left;
+    margin-top: 0;
+}
 .resume h1{
     text-align: left;
+}
+#contact_resume{
+    text-align: left;
+    margin-top: 0;
+}
+#contact_resume li{
+    display: inline-block;
+    padding-right:10px;
 }
 #welcome{
     text-align:center;
