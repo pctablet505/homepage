@@ -5,7 +5,7 @@ Certificate = namedtuple('Certificate', ['credential', 'src', 'title'])
 certificates = [
     Certificate(
         credential='https://courses.edx.org/certificates/8cbde197f6874661ab8794d753f9fd7b',
-        src='static/MIT 6.86x Machine Learning with Python-From Linear Models to Deep Learning.png',
+        src='static/certificates/MIT 6.86x Machine Learning with Python-From Linear Models to Deep Learning.png',
         title='Machine Learning with Python-From Linear Models to Deep Learning'
 
     ),
