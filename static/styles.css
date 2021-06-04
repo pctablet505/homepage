@@ -76,7 +76,7 @@ ul {
 }
 
 .content, .content2, .content3 {
-    border: 2px solid deepskyblue;
+    border: 1px solid deepskyblue;
     padding: 30px;
     padding-left: 35px;
     border-radius: 50px;
