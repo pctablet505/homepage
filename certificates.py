@@ -6,7 +6,7 @@ certificates = [
     Certificate(
         credential='https://courses.edx.org/certificates/8cbde197f6874661ab8794d753f9fd7b',
         src='static/certificates/MIT Machine Learning.PNG',
-        title='Machine Learning with Python-From Linear Models to Deep Learning'
+        title='MIT Machine Learning with Python-From Linear Models to Deep Learning'
 
     ),
     Certificate(
