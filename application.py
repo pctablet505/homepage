@@ -34,8 +34,6 @@ def contact():
 
 @app.route('/certifications')
 def certifications():
-    certificates.sort(key=lambda x: x.title)
-
     return render_template('certifications.html', routes=routes, certificates=certificates)
 
 

@@ -6,9 +6,19 @@ certificates = [
     Certificate(
         credential='https://courses.edx.org/certificates/8cbde197f6874661ab8794d753f9fd7b',
         src='static/certificates/MIT Machine Learning.PNG',
-        title='MIT Machine Learning with Python-From Linear Models to Deep Learning'
-
-    ),
+        title='MIT Machine Learning with Python-From Linear Models to Deep Learning'),
+    Certificate(
+        credential='https://cs50.harvard.edu/certificates/2b1773c1-473d-4a7b-89ae-460d23154126',
+        src='static/certificates/CS50 AI.png',
+        title='Harvard CS50 Introduction to Artificial Intelligence with python'),
+    Certificate(
+        credential='https://www.coursera.org/account/accomplishments/certificate/UA73U5EJC6XJ',
+        src='static/certificates/IBM Introductioin to AI.png',
+        title='IBM Introductioin to AI'),
+    Certificate(
+        credential='http://ude.my/UC-d7c52c49-464f-4b63-a9b4-2da5d4c53ff4/',
+        src='static/certificates/Machine Learning.jpg',
+        title='Udemy Complete 2020 Data Science & Machine Learning Bootcamp'),
     Certificate(
         credential='https://www.hackerrank.com/certificates/58d066424a1e',
         src='static/certificates/C Advanced.png',
@@ -21,14 +31,7 @@ certificates = [
         credential='https://www.hackerrank.com/certificates/337182b9dc84',
         src='static/certificates/C Intermediate.png',
         title='C Intermediate'),
-    Certificate(
-        credential='https://cs50.harvard.edu/certificates/2b1773c1-473d-4a7b-89ae-460d23154126',
-        src='static/certificates/CS50 AI.png',
-        title='CS50 AI'),
-    Certificate(
-        credential='https://www.coursera.org/account/accomplishments/certificate/UA73U5EJC6XJ',
-        src='static/certificates/IBM Introductioin to AI.png',
-        title='IBM Introductioin to AI'),
+
     Certificate(
         credential='https://www.hackerrank.com/certificates/92d056e955d2',
         src='static/certificates/CSS.png',
@@ -77,10 +80,7 @@ certificates = [
         credential='https://www.hackerrank.com/certificates/2508bf1f2b12',
         src='static/certificates/SQL Basic.png',
         title='SQL Basic'),
-    Certificate(
-        credential='http://ude.my/UC-d7c52c49-464f-4b63-a9b4-2da5d4c53ff4/',
-        src='static/certificates/Machine Learning.jpg',
-        title='Udemy Complete 2020 Data Science & Machine Learning Bootcamp'),
+
     Certificate(
         credential='https://www.udemy.com/certificate/UC-37c2faaf-17c4-4089-ab2d-18190a8aa61f/',
         src='static/certificates/DSA.jpg',
