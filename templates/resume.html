@@ -16,7 +16,7 @@
             <img src="/static/me/3.jpg"
                  style="border:3px solid black; border-radius: 200px; width:200px; height:200px; float:right;margin-right: 100px;">
 
-            I am a Computer Science engineering student from <a href="https://www.bitsindri.ac.in" target="_blank">BIT_Sindri</a>.<br>
+            I am a Computer Science engineering student from <a target="_blank"  href="https://www.bitsindri.ac.in" target="_blank">BIT_Sindri</a>.<br>
             Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
             And Interested in theoretical details and implementation.
             Also familiar with basic web programming and GUI.
@@ -35,7 +35,7 @@
                             {{ method }}
                         </td>
                         <td>
-                            <a href="{{ contacts[method][1] }}"
+                            <a target="_blank" href="{{ contacts[method][1] }}"
                                style="font-style:oblique;">{{ contacts[method][0] }}</a>
                         </td>
                     </tr>
@@ -60,24 +60,24 @@
                 <tbody>
                 <tr>
 
-                    <td><a href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a></td>
-                    <td><a href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
+                    <td><a target="_blank" href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a></td>
+                    <td><a target="_blank" href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
                            target="_blank">B.Tech Computer Science</a></td>
                     <td>2018-2022</td>
                 </tr>
                 <tr>
-                    <td><a href="https://micromasters.mit.edu/" target="_blank">MITx</a></td>
-                    <td><a href=https://micromasters.mit.edu/ds/ target="_blank">Micro Masters in Statitics and Data
+                    <td><a target="_blank" href="https://micromasters.mit.edu/" target="_blank">MITx</a></td>
+                    <td><a target="_blank" href=https://micromasters.mit.edu/ds/ target="_blank">Micro Masters in Statitics and Data
                         Science</a></td>
                     <td>2021-2022</td>
                 </tr>
                 <tr>
-                    <td><a href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh Public School</a></td>
+                    <td><a target="_blank" href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh Public School</a></td>
                     <td>Higher Secondary Education</td>
                     <td>2015-2017</td>
                 </tr>
                 <tr>
-                    <td><a href="http://www.arspublicschool.com" target="_blank">ARS Public School</a></td>
+                    <td><a target="_blank" href="http://www.arspublicschool.com" target="_blank">ARS Public School</a></td>
                     <td>
                         <ul>
 
@@ -127,7 +127,7 @@
                                 <dt>{{ achievement.achievement }}</dt>
                                 <dd> {{ achievement.description }}
                                     {% if achievement.link %}
-                                        <a href="{{ achievement.link }}">Visit</a>
+                                        <a target="_blank" href="{{ achievement.link }}">Visit</a>
                                     {% endif %}
                                 </dd>
 
@@ -151,7 +151,7 @@
 
         <ul class="content3 ">
             {% for certificate in certificates %}
-                <li><a href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
+                <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
             {% endfor %}
         </ul>
         <hr>
@@ -163,7 +163,7 @@
             {% for project in projects %}
                 <li>
 
-                    <a href="{{ project['code'] }}">{{ project['title'] }}</a>
+                    <a target="_blank" href="{{ project['code'] }}">{{ project['title'] }}</a>
 
                 </li>
 
