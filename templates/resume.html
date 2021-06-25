@@ -1,83 +1,106 @@
 {% extends "layout.html" %}
 {% block title %}
-    Resume
+Resume
 {% endblock %}
 
 {% block main %}
-    <button id="download" onclick="window.open('{{ url_for('static',filename='resume.pdf') }}','_blank')"
-            class="btn btn-primary">
-        Download Resume
-    </button>
-    <h1 style="font-size: 1in; font-family: Bahnschrift">Rahul Kumar</h1>
-    <div class="resume">
+<button id="download" onclick="window.open('{{ url_for('static',filename='resume.pdf') }}','_blank')"
+    class="btn btn-primary">
+    Download Resume
+</button>
+<h1 style="font-size: 1in; font-family: Bahnschrift">Rahul Kumar</h1>
+<div class="resume content">
+    <h1>About</h1>
+    <div class="row">
+        <div class="col">
 
-        <h1>About</h1>
-        <p>
+            <p>
+                I am a Computer Science engineering student from <a target="_blank" href="https://www.bitsindri.ac.in"
+                    target="_blank">BIT_Sindri</a>.<br>
+                Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
+                And Interested in theoretical details and implementation.
+                With a good knowledge in Statitics and Data Science.
+                Also familiar with basic web programming and GUI.
+                
+
+            </p>
+            <a href="https://www.google.com/maps/place/Bokaro+Steel+City,+Jharkhand/@23.6676092,86.0490819,12z/data=!3m1!4b1!4m5!3m4!1s0x39f4230341010871:0xf89f21d9001d5036!8m2!3d23.6692888!4d86.1510944"
+                target="_blank">
+                <h4 style="color: darkblue;">Address</h4></a>
+            <address>
+                Ritudih, Bokaro Steel City,
+                Jharkhand, India 827010.
+            </address>
+        </div>
+
+        <div class="col">
             <img src="/static/me/3.jpg"
-                 style="border:3px solid black; border-radius: 200px; width:200px; height:200px; float:right;margin-right: 100px;">
+                style="border:3px solid black; border-radius: 200px; width:200px; height:200px; float:right;margin-right: 100px;">
 
-            I am a Computer Science engineering student from <a target="_blank"  href="https://www.bitsindri.ac.in" target="_blank">BIT_Sindri</a>.<br>
-            Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
-            And Interested in theoretical details and implementation.
-            Also familiar with basic web programming and GUI.
-
-        </p>
-
-    </div>
-    <div class="resume">
-        <h1>Contact</h1>
-
-        <ul id="contact_resume">
-            {% for method in contacts %}
-                <li>
-                    <tr>
-                        <td>
-                            {{ method }}
-                        </td>
-                        <td>
-                            <a target="_blank" href="{{ contacts[method][1] }}"
-                               style="font-style:oblique;">{{ contacts[method][0] }}</a>
-                        </td>
-                    </tr>
-
-                </li>
-            {% endfor %}
-        </ul>
-        <hr>
+        </div>
     </div>
 
 
-    <div class="resume">
-        <h1>Education</h1>
-        <div class="content">
-            <table class="table  table-bordered" style="margin-left:auto; margin-top:39px;">
+</div>
+<div class="resume">
+    <h1>Contact</h1>
 
-                <thead class="thead text-center" style="font-size:large">
+    <ul id="contact_resume">
+        {% for method in contacts %}
+        <li>
+            <tr>
+                <td>
+                    {{ method }}
+                </td>
+                <td>
+                    <a target="_blank" href="{{ contacts[method][1] }}" style="font-style:oblique;">{{
+                        contacts[method][0] }}</a>
+                </td>
+            </tr>
+
+        </li>
+        {% endfor %}
+    </ul>
+    <hr>
+</div>
+
+
+<div class="resume">
+    <h1>Education</h1>
+    <div class="content">
+        <table class="table  table-bordered" style="margin-left:auto; margin-top:39px;">
+
+            <thead class="thead text-center" style="font-size:large">
                 <th scope="col">Institution</th>
                 <th scope="col">Education</th>
                 <th scope="col">Year</th>
-                </thead>
-                <tbody>
+            </thead>
+            <tbody>
                 <tr>
 
-                    <td><a target="_blank" href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a></td>
-                    <td><a target="_blank" href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
-                           target="_blank">B.Tech Computer Science</a></td>
+                    <td><a target="_blank" href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a>
+                    </td>
+                    <td><a target="_blank"
+                            href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
+                            target="_blank">B.Tech Computer Science</a></td>
                     <td>2018-2022</td>
                 </tr>
                 <tr>
                     <td><a target="_blank" href="https://micromasters.mit.edu/" target="_blank">MITx</a></td>
-                    <td><a target="_blank" href=https://micromasters.mit.edu/ds/ target="_blank">Micro Masters in Statitics and Data
-                        Science</a></td>
+                    <td><a target="_blank" href=https://micromasters.mit.edu/ds/ target="_blank">Micro Masters
+                            in Statitics and Data
+                            Science</a></td>
                     <td>2021-2022</td>
                 </tr>
                 <tr>
-                    <td><a target="_blank" href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh Public School</a></td>
+                    <td><a target="_blank" href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh
+                            Public School</a></td>
                     <td>Higher Secondary Education</td>
                     <td>2015-2017</td>
                 </tr>
                 <tr>
-                    <td><a target="_blank" href="http://www.arspublicschool.com" target="_blank">ARS Public School</a></td>
+                    <td><a target="_blank" href="http://www.arspublicschool.com" target="_blank">ARS Public
+                            School</a></td>
                     <td>
                         <ul>
 
@@ -93,52 +116,52 @@
                     <td>Elementary School</td>
                     <td>2005-2008</td>
                 </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <hr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="container resume" >
-        <div class="row content  ">
-            <div class="col-12 col-md-6" >
-                <div class="resume">
-                    <h1>Skills</h1>
-                    <ol >
-                        {% for skill in skills %}
-                            <li>{{ skill }}</li>
-                            <ul class="skills">
-                                {% for sub_skill in skills[skill] %}
-                                    <li>{{ sub_skill }}</li>
-                                {% endfor %}
-                            </ul>
+    <hr>
+</div>
 
+<div class="resume content">
+    <div class="row ">
+        <div class="col-12 col-md-6">
+            <div class="resume">
+                <h1>Skills</h1>
+                <ol>
+                    {% for skill in skills %}
+                    <li>{{ skill }}</li>
+                    <ul class="skills">
+                        {% for sub_skill in skills[skill] %}
+                        <li>{{ sub_skill }}</li>
                         {% endfor %}
-                    </ol>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="resume">
-                    <h1>Achievements</h1>
-                    <ol class="list-group">
-                        {% for achievement in achievements %}
-                            <li>
-                                <dt>{{ achievement.achievement }}</dt>
-                                <dd> {{ achievement.description }}
-                                    {% if achievement.link %}
-                                        <a target="_blank" href="{{ achievement.link }}">Visit</a>
-                                    {% endif %}
-                                </dd>
+                    </ul>
 
-                            </li>
-                        {% endfor %}
-                    </ol>
-                </div>
+                    {% endfor %}
+                </ol>
             </div>
         </div>
-        <hr>
+        <div class="col-12 col-md-6">
+            <div class="resume">
+                <h1>Achievements</h1>
+                <ol class="list-group">
+                    {% for achievement in achievements %}
+                    <li>
+                        <dt>{{ achievement.achievement }}</dt>
+                        <dd> {{ achievement.description }}
+                            {% if achievement.link %}
+                            <a target="_blank" href="{{ achievement.link }}">Visit</a>
+                            {% endif %}
+                        </dd>
+
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
     </div>
+    <hr>
+</div>
 
 
 
@@ -146,39 +169,39 @@
 
 
 
-    <div class="resume">
-        <h1>Certifications</h1>
+<div class="resume">
+    <h1>Certifications</h1>
 
-        <ul class="content3 ">
-            {% for certificate in certificates %}
-                <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
-            {% endfor %}
-        </ul>
-        <hr>
+    <ul class="content3 ">
+        {% for certificate in certificates %}
+        <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <hr>
 
-    </div>
-    <div class="resume">
-        <h1>Projects</h1>
-        <ol class="content2 ">
-            {% for project in projects %}
-                <li>
+</div>
+<div class="resume">
+    <h1>Projects</h1>
+    <ol class="content2 ">
+        {% for project in projects %}
+        <li>
 
-                    <a target="_blank" href="{{ project['code'] }}">{{ project['title'] }}</a>
+            <a target="_blank" href="{{ project['code'] }}">{{ project['title'] }}</a>
 
-                </li>
+        </li>
 
 
-            {% endfor %}
-        </ol>
-        <hr>
-    </div>
-    <div class="resume">
-        <h1>Hobbies</h1>
-        <ul class="content">
-            {% for hobby in hobbies %}
-                <li>{{ hobby }}</li>
-            {% endfor %}
-        </ul>
-    </div>
+        {% endfor %}
+    </ol>
+    <hr>
+</div>
+<div class="resume">
+    <h1>Hobbies</h1>
+    <ul class="content">
+        {% for hobby in hobbies %}
+        <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+</div>
 
 {% endblock %}
