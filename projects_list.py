@@ -3,7 +3,7 @@ from collections import namedtuple
 Project = namedtuple(
     'Project', ['title', 'description', 'demonstration', 'code'])
 projects_list = [
-    Project('PacMan',
+    Project('PacMan AI',
             '''AI based intelligent agent to control pacman in different environments''',
             '''https://inst.eecs.berkeley.edu/~cs188/sp21/project1/''',
             'https://github.com/pctablet505/CS188-AI/tree/main/proj1-search-python3'
@@ -57,14 +57,14 @@ projects_list = [
 
     ),
     Project(
-        'Tic-Tac-Toe',
+        'Tic-Tac-Toe AI',
         'MiniMax based undefeatable Intelligent to play against human.',
         'https://www.youtube.com/watch?v=tp9DjqV_KoU',
         'https://github.com/pctablet505/Artificial-Intelligence/tree/main/tictactoe'
 
     ),
     Project(
-        'Minesweeper',
+        'Minesweeper AI',
         '''Knowledge based Intelligent agent to play Minesweeper which reasons using preposotional logic.''',
         'https://cs50.harvard.edu/ai/2020/projects/1/minesweeper/',
         'https://github.com/pctablet505/Artificial-Intelligence/tree/main/minesweeper'
