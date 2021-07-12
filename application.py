@@ -60,5 +60,5 @@ def route(name):
 @app.route('/resume')
 def resume():
     hobbies = ['Digital Arts', 'Tabla Playing']
-    return render_template('resume.html', routes=routes, skills=skills, projects=projects_list, contacts=contacts,
+    return render_template('resume.html',  skills=skills, projects=projects_list, contacts=contacts,
                            achievements=achievements_list, hobbies=hobbies, certificates=certificates)
