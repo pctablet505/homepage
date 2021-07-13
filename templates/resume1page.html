@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_resume.html" %}
 {% block title %}
 Resume
 {% endblock %}
@@ -18,9 +18,9 @@ Resume
                 I am a Computer Science engineering student from <a target="_blank" href="https://www.bitsindri.ac.in"
                     target="_blank">BIT_Sindri</a>.<br>
                 Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
-                And Interested in theoretical details and implementation.
+                Interested in theoretical details and implementation.
                 With a good knowledge in Statitics and Data Science.
-                Also familiar with basic web programming and GUI.
+                Also familiar with basic web programming and cross-platform GUI.
 
 
             </p>
@@ -153,6 +153,8 @@ Resume
     <ul class="content">
         {% for certificate in certificates %}
         <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
+        <dt>{{certificate.organization}}</dt>
+        
         {% endfor %}
     </ul>
     <hr>

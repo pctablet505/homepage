@@ -68,5 +68,6 @@ def resume():
 @app.route('/resume1page')
 def resume1page():
     hobbies = ['Digital Arts', 'Tabla Playing']
+    print(routes)
     return render_template('resume1page.html',  skills=r1.skills, projects=projects_list, contacts=contacts,
                            achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates)
