@@ -12,49 +12,56 @@ Resume
     @import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Vast+Shadow&display=swap');
 </style>
 <h1 style="font-size: .6in; font-family: 'Goblin One', cursive, cursive;">Rahul Kumar</h1>
-<div class="resume content">
-    <ul id="contact_resume">
-        {% for method in contacts %}
-        <li>
-            <tr>
-                <td>
-                    {{ method }}
-                </td>
-                <td>
-                    <a target="_blank" href="{{ contacts[method][1] }}" style="font-style:oblique;">{{
-                        contacts[method][0] }}</a>
-                </td>
-            </tr>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="resume">
+    <div class="content">
+        <ul id="contact_resume">
+            {% for method in contacts %}
+            <li>
+                <tr>
+                    <td>
+                        {{ method }}
+                    </td>
+                    <td>
+                        <a target="_blank" href="{{ contacts[method][1] }}" style="font-style:oblique;">{{
+                            contacts[method][0] }}</a>
+                    </td>
+                </tr>
+            </li>
+            {% endfor %}
+        </ul>
 
-    <div class="resume">
+        <div class="resume">
 
 
-        <div class="row">
-            <div class="col-7">
-                <p>
-                <address>
-                    Bokaro Steel City,
-                    Jharkhand, India 827010.
-                </address>
+            <div class="row">
+                <div class="col-7">
+                    <p>
+                    <address>
+                        Bokaro Steel City,
+                        Jharkhand, India 827010.
+                    </address>
 
-                Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
-                Interested in theoretical details and implementation.
-                With a good knowledge in Statitics and Data Science.
-                Also familiar with basic web programming and cross-platform GUI.
-                </p>
+                    Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
+                    Interested in theoretical details and implementation.
+                    With a good knowledge in Statitics and Data Science.
+                    Also familiar with basic web programming and cross-platform GUI.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="/static/me/3.jpg"
+                        style="border:3px solid black; border-radius: 200px; width:200px; height:180px; float:inherit;/* margin-right: 100px; */">
+
+                </div>
             </div>
-            <div class="col">
-                <img src="/static/me/3.jpg"
-                    style="border:3px solid black; border-radius: 200px; width:200px; height:180px; float:inherit;/* margin-right: 100px; */">
 
-            </div>
         </div>
 
     </div>
+    <hr>
 </div>
+
+
+
 
 
 <div class="resume">
@@ -110,7 +117,6 @@ Resume
             </tbody>
         </table>
     </div>
-
     <hr>
 </div>
 
