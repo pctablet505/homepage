@@ -49,7 +49,7 @@ Resume
                 </div>
                 <div class="col">
                     <img src="/static/me/3.jpg"
-                        style="border:3px solid black; border-radius: 200px; width:200px; height:180px; float:inherit;/* margin-right: 100px; */">
+                        style="border:3px solid black; border-radius: 50px; width:130px; height:130px; float:center;">
 
                 </div>
             </div>
@@ -57,7 +57,7 @@ Resume
         </div>
 
     </div>
-    <hr>
+
 </div>
 
 
@@ -67,7 +67,7 @@ Resume
 <div class="resume">
     <h1>Education</h1>
     <div class="content">
-        <table class="table">
+        <table class="table" style="margin: 0px;">
 
             <thead class="thead text-left" style="font-size:large">
                 <th scope="col">Institution</th>
@@ -100,12 +100,9 @@ Resume
                     <td><a target="_blank" href="http://www.arspublicschool.com" target="_blank">ARS Public
                             School</a></td>
                     <td>
-                        <ul>
+                        High School
 
-                            <li>High School</li>
-                            <li>Middle School</li>
 
-                        </ul>
                     </td>
                     <td>2008-2015</td>
                 </tr>
@@ -117,7 +114,7 @@ Resume
             </tbody>
         </table>
     </div>
-    <hr>
+
 </div>
 
 
@@ -137,7 +134,7 @@ Resume
         </li>
         {% endfor %}
     </ol>
-    <hr>
+
 </div>
 
 
@@ -146,20 +143,19 @@ Resume
 
 <div class="resume">
     <h1>Certifications</h1>
-
     <ul class="content">
         {% for certificate in certificates %}
-        <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
-        <dt>{{certificate.organization}}</dt>
-
+        <dt>
+            <li><a style="color:black" target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a>
+            </li>
+        </dt>
+        <dd>{{certificate.organization}}</dd>
         {% endfor %}
     </ul>
-    <hr>
-
 </div>
 <div class="resume">
     <h1>Skills</h1>
-    <ul class="content content4">
+    <ul class="content content5">
         {% for skill in skills %}
         <li>{{ skill }}</li>
 
@@ -170,7 +166,7 @@ Resume
 
         {% endfor %}
     </ul>
-    <hr>
+
 </div>
 
 <div class="resume">
@@ -186,7 +182,7 @@ Resume
 
         {% endfor %}
     </ol>
-    <hr>
+
 </div>
 <div class="resume">
     <h1>Hobbies</h1>

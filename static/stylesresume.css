@@ -1,5 +1,7 @@
 body {
     background-color: azure;
+    border: 15px solid black;
+    
 }
 
 h1 {
@@ -14,7 +16,7 @@ h1 {
     padding: 15px;
     padding-left: 30px;
     border-radius: 5%;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .underlined {
@@ -28,7 +30,7 @@ main {
 }
 
 ul {
-    margin-top: 50px;
+    margin-top: 20px;
     list-style-type: none;
     text-align: center;
 }
@@ -53,6 +55,7 @@ ul {
 
 .resume h1 {
     text-align: left;
+    margin-left: 30px;
 }
 
 #contact_resume {
@@ -77,9 +80,10 @@ ul {
 
 .content, .content2, .content3 {
     border: 1px solid deepskyblue;
-    padding: 15px;
+    padding: 10px;
     padding-left: 35px;
     border-radius: 50px;
+    margin-bottom: 0px;
 }
 
 .content2 {
@@ -90,8 +94,8 @@ ul {
     column-count: 3;
     column-gap: 50px;
 }
-.content4 {
-    column-count: 4;
-    column-gap: 50px;
+.content5 {
+    column-count: 5;
+    column-gap: 30px;
 }
 
