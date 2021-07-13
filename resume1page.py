@@ -66,7 +66,7 @@ contacts = {
     'LinkedIn': ('@pctablet505', 'https://www.linkedin.com/in/pctablet505'),
     'Hackerrank': ('@pctablet505', 'https://www.hackerrank.com/pctablet505'),
     'GitHub': ('@pctablet505', 'https://www.github.com/pctablet505'),
-    'Instagram': ('@pctablet505', 'https://www.instagram.com/pctablet505'),
+    
 }
 
 skills = defaultdict(list,

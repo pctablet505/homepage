@@ -8,44 +8,11 @@ Resume
     class="btn btn-primary">
     Download Resume
 </button> -->
-<h1 style="font-size: 1in; font-family: Bahnschrift">Rahul Kumar</h1>
-<div class="resume content">
-    <h1>About</h1>
-    <div class="row">
-        <div class="col">
-
-            <p>
-                I am a Computer Science engineering student from <a target="_blank" href="https://www.bitsindri.ac.in"
-                    target="_blank">BIT_Sindri</a>.<br>
-                Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
-                Interested in theoretical details and implementation.
-                With a good knowledge in Statitics and Data Science.
-                Also familiar with basic web programming and cross-platform GUI.
-
-
-            </p>
-            <a href="https://www.google.com/maps/place/Bokaro+Steel+City,+Jharkhand/@23.6676092,86.0490819,12z/data=!3m1!4b1!4m5!3m4!1s0x39f4230341010871:0xf89f21d9001d5036!8m2!3d23.6692888!4d86.1510944"
-                target="_blank">
-                <h4 style="color: black;"><strong>Address</strong></h4>
-            </a>
-            <address>
-                Bokaro Steel City,
-                Jharkhand, India 827010.
-            </address>
-        </div>
-
-        <div class="col">
-            <img src="/static/me/3.jpg"
-                style="border:3px solid black; border-radius: 200px; width:200px; height:200px; float:right;margin-right: 100px;">
-
-        </div>
-    </div>
-
-
-</div>
-<div class="resume">
-    <h1>Contact</h1>
-
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Vast+Shadow&display=swap');
+</style>
+<h1 style="font-size: .6in; font-family: 'Goblin One', cursive, cursive;">Rahul Kumar</h1>
+<div class="content">
     <ul id="contact_resume">
         {% for method in contacts %}
         <li>
@@ -58,11 +25,35 @@ Resume
                         contacts[method][0] }}</a>
                 </td>
             </tr>
-
         </li>
         {% endfor %}
     </ul>
-    <hr>
+
+    <div class="resume">
+
+
+        <div class="row">
+            <div class="col-7">
+                <p>
+                <address>
+                    Bokaro Steel City,
+                    Jharkhand, India 827010.
+                </address>
+
+                Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
+                Interested in theoretical details and implementation.
+                With a good knowledge in Statitics and Data Science.
+                Also familiar with basic web programming and cross-platform GUI.
+                </p>
+            </div>
+            <div class="col">
+                <img src="/static/me/3.jpg"
+                    style="border:3px solid black; border-radius: 200px; width:200px; height:180px; float:inherit;/* margin-right: 100px; */">
+
+            </div>
+        </div>
+
+    </div>
 </div>
 
 
@@ -154,7 +145,7 @@ Resume
         {% for certificate in certificates %}
         <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
         <dt>{{certificate.organization}}</dt>
-        
+
         {% endfor %}
     </ul>
     <hr>
