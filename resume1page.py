@@ -39,11 +39,12 @@ achievements = [
                 'https://www.hackerrank.com/leaderboard?filter=pctablet505&filter_on=hacker&page=1&track=python&type=practice'),
 ]
 
-Certificate = namedtuple('Certificate', ['credential', 'src', 'title','organization'])
+Certificate = namedtuple(
+    'Certificate', ['credential', 'src', 'title', 'organization'])
 
 certificates = [
     Certificate(credential='https://courses.edx.org/certificates/8cbde197f6874661ab8794d753f9fd7b',
-                src='static/certificates/MIT Machine Learning.PNG', title='MIT Machine Learning with Python-From Linear Models to Deep Learning',
+                src='static/certificates/MIT Machine Learning.PNG', title='Machine Learning with Python-From Linear Models to Deep Learning',
                 organization='Massachusetts Institute of Technology'),
     Certificate(credential='https://cs50.harvard.edu/certificates/2b1773c1-473d-4a7b-89ae-460d23154126',
                 src='static/certificates/CS50 AI.png', title='CS50 Introduction to Artificial Intelligence with Python',
@@ -54,10 +55,14 @@ certificates = [
     Certificate(credential='http://ude.my/UC-d7c52c49-464f-4b63-a9b4-2da5d4c53ff4/',
                 src='static/certificates/Machine Learning.jpg', title='Udemy Complete 2020 Data Science & Machine Learning Bootcamp',
                 organization='Udemy'),
+
+    Certificate(credential='https://www.hackerrank.com/certificates/fc7b9af8aac8',
+                src='static/certificates/problem Solving Advanced.png', title='Problem Solving Advanced',
+                organization='Hackerrank'),
     Certificate(credential='/certifications',
                 src='', title='For more please visit',
                 organization=''),
-    
+
 ]
 contacts = {
     'Website': ('https://pctablet505.herokuapp.com', 'https://pctablet505.herokuapp.com/about'),
@@ -66,7 +71,7 @@ contacts = {
     'LinkedIn': ('@pctablet505', 'https://www.linkedin.com/in/pctablet505'),
     'Hackerrank': ('@pctablet505', 'https://www.hackerrank.com/pctablet505'),
     'GitHub': ('@pctablet505', 'https://www.github.com/pctablet505'),
-    
+
 }
 
 skills = defaultdict(list,
