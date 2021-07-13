@@ -121,7 +121,7 @@ Resume
 
 <div class="resume">
     <h1>Achievements</h1>
-    <ol class="content3">
+    <ol class="content " style="column-count:4 ; column-gap: 40px;">
         {% for achievement in achievements %}
         <li>
             <dt>{{ achievement.achievement }}</dt>
@@ -143,7 +143,7 @@ Resume
 
 <div class="resume">
     <h1>Certifications</h1>
-    <ul class="content2">
+    <ul class="content " style="column-count:2 ;">
         {% for certificate in certificates %}
         <dt>
             <li><a style="color:black" target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a>
@@ -155,7 +155,7 @@ Resume
 </div>
 <div class="resume">
     <h1>Skills</h1>
-    <ul class="content content5">
+    <ul class="content " style="column-count:6 ; column-gap: 30px;">
         {% for skill in skills %}
         <li>{{ skill }}</li>
 
@@ -171,7 +171,7 @@ Resume
 
 <div class="resume">
     <h1>Projects</h1>
-    <ol class="content3 ">
+    <ol class="content " style="column-count:3 ;">
         {% for project in projects %}
         <li>
 
@@ -186,7 +186,7 @@ Resume
 </div>
 <div class="resume">
     <h1>Hobbies</h1>
-    <ul class="content">
+    <ul class="content" style="column-count: 3;">
         {% for hobby in hobbies %}
         <li>{{ hobby }}</li>
         {% endfor %}

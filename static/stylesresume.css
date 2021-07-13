@@ -56,6 +56,8 @@ ul {
 .resume h1 {
     text-align: left;
     margin-left: 30px;
+    font-size: xx-large;
+
 }
 
 #contact_resume {
@@ -86,16 +88,5 @@ ul {
     margin-bottom: 0px;
 }
 
-.content2 {
-    column-count: 2;
-    column-gap: 30px;
-}
-.content3 {
-    column-count: 3;
-    column-gap: 50px;
-}
-.content5 {
-    column-count: 5;
-    column-gap: 30px;
-}
+
 
