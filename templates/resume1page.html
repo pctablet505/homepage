@@ -4,10 +4,10 @@ Resume
 {% endblock %}
 
 {% block main %}
-<button id="download" onclick="window.open('{{ url_for('static', filename='resume.pdf') }}','_blank')"
+<!-- <button id="download" onclick="window.open('{{ url_for('static', filename='resume.pdf') }}','_blank')"
     class="btn btn-primary">
     Download Resume
-</button>
+</button> -->
 <h1 style="font-size: 1in; font-family: Bahnschrift">Rahul Kumar</h1>
 <div class="resume content">
     <h1>About</h1>
@@ -91,7 +91,7 @@ Resume
                             href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
                             target="_blank">B.Tech Computer Science</a></td>
                     <td>2018-2022</td>
-                </tr>                
+                </tr>
                 <tr>
                     <td><a target="_blank" href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh
                             Public School</a></td>
@@ -123,47 +123,25 @@ Resume
     <hr>
 </div>
 
-<div class="resume content">
-    <div class="row ">
-        <div class="col-12 col-md-6">
-            <div class="resume">
-                <h1>Skills</h1>
-                <ol>
-                    {% for skill in skills %}
-                    <li>{{ skill }}</li>
-                    <ul class="skills">
-                        {% for sub_skill in skills[skill] %}
-                        <li>{{ sub_skill }}</li>
-                        {% endfor %}
-                    </ul>
 
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-        <div class="col-12 col-md-6">
-            <div class="resume">
-                <h1>Achievements</h1>
-                <ol class="list-group">
-                    {% for achievement in achievements %}
-                    <li>
-                        <dt>{{ achievement.achievement }}</dt>
-                        <dd> {{ achievement.description }}
-                            {% if achievement.link %}
-                            <a target="_blank" href="{{ achievement.link }}">Visit</a>
-                            {% endif %}
-                        </dd>
 
-                    </li>
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-    </div>
+<div class="resume">
+    <h1>Achievements</h1>
+    <ol class="content3">
+        {% for achievement in achievements %}
+        <li>
+            <dt>{{ achievement.achievement }}</dt>
+            <dd> {{ achievement.description }}
+                {% if achievement.link %}
+                <a target="_blank" href="{{ achievement.link }}">Visit</a>
+                {% endif %}
+            </dd>
+
+        </li>
+        {% endfor %}
+    </ol>
     <hr>
 </div>
-
-
 
 
 
@@ -172,7 +150,7 @@ Resume
 <div class="resume">
     <h1>Certifications</h1>
 
-    <ul class="content3 ">
+    <ul class="content">
         {% for certificate in certificates %}
         <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
         {% endfor %}
@@ -180,6 +158,22 @@ Resume
     <hr>
 
 </div>
+<div class="resume">
+    <h1>Skills</h1>
+    <ul class="content3">
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+
+        {% for sub_skill in skills[skill] %}
+        <li>{{ sub_skill }}</li>
+        {% endfor %}
+
+
+        {% endfor %}
+    </ul>
+    <hr>
+</div>
+
 <div class="resume">
     <h1>Projects</h1>
     <ol class="content2 ">

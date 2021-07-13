@@ -1,0 +1,92 @@
+from collections import defaultdict
+from collections import namedtuple
+
+Achievement = namedtuple(
+    'Achievement', ['achievement', 'description', 'link'])
+achievements = [
+    Achievement('World Programming Championship - IIT Mumbai',
+                'Rank 69 | Certificate no 99695',
+                ''),
+    Achievement('Gold in HackFest 2020',
+                '''Rank 29 | 8051  Rating 2042.08 from 1500''',
+                'https://www.hackerrank.com/reslits/hackerrank-hackfest-2020/pctablet505'),
+    Achievement('GATE 2021',
+                '''Got AIR 5648''',
+                ''),
+    Achievement('CodeVita Season 9',
+                '''Cleared Round 1 with Rank 1042''',
+                ''),
+    Achievement('CodeVita Season 9',
+                '''Got International 242 in Round 2''',
+                ''),
+    Achievement('Hack the Interview III',
+                '''Rank(73 | 919)''',
+                'https://www.hackerrank.com/reslits/hack-the-interview-iv/pctablet505'),
+    Achievement('Hack the Interview IV (Asia Pacific)',
+                '''Rank(100 | 4353)''',
+                'https://www.hackerrank.com/reslits/hack-the-interview-iv-apac/pctablet505'),
+    Achievement('Hack the Interview IV (U.S.) ',
+                '''Rank( 65 | 1217) ''',
+                'https://www.hackerrank.com/reslits/hack-the-interview-iv/pctablet505?h_r=profile'),
+    Achievement('Hackerrank Algorithms',
+                '''Rank 815/ 2219538''',
+                'https://www.hackerrank.com/leaderboard?filter=pctablet505&filter_on=hacker&page=1&track=algorithms&type=practice'),
+    Achievement('Hackerrank Data Structures ',
+                '''Rank 169| 931788''',
+                'https://www.hackerrank.com/leaderboard?filter=pctablet505&filter_on=hacker&page=1&track=data-structures&type=practice'),
+    Achievement('Hackerrank Python Practice',
+                '''Rank 1''',
+                'https://www.hackerrank.com/leaderboard?filter=pctablet505&filter_on=hacker&page=1&track=python&type=practice'),
+]
+
+Certificate = namedtuple('Certificate', ['credential', 'src', 'title'])
+
+certificates = [
+    Certificate(credential='https://courses.edx.org/certificates/8cbde197f6874661ab8794d753f9fd7b',
+                src='static/certificates/MIT Machine Learning.PNG', title='MIT Machine Learning with Python-From Linear Models to Deep Learning'),
+    Certificate(credential='https://cs50.harvard.edu/certificates/2b1773c1-473d-4a7b-89ae-460d23154126',
+                src='static/certificates/CS50 AI.png', title='CS50 Introduction to Artificial Intelligence with Python'),
+    Certificate(credential='https://www.coursera.org/account/accomplishments/certificate/UA73U5EJC6XJ',
+                src='static/certificates/IBM Introductioin to AI.png', title='IBM Introductioin to AI'),
+    Certificate(credential='http://ude.my/UC-d7c52c49-464f-4b63-a9b4-2da5d4c53ff4/',
+                src='static/certificates/Machine Learning.jpg', title='Udemy Complete 2020 Data Science & Machine Learning Bootcamp'),
+    
+]
+contacts = {
+    'Website': ('https://pctablet505.herokuapp.com', 'https://pctablet505.herokuapp.com/about'),
+    'Mail': ('pctablet505@gmail.com', 'mailto:pctablet505@gmail.com'),
+    'Phone': ('+91 8709253658', 'tel:+91 8709253658'),
+    'LinkedIn': ('@pctablet505', 'https://www.linkedin.com/in/pctablet505'),
+    'Hackerrank': ('@pctablet505', 'https://www.hackerrank.com/pctablet505'),
+    'GitHub': ('@pctablet505', 'https://www.github.com/pctablet505'),
+    'Instagram': ('@pctablet505', 'https://www.instagram.com/pctablet505'),
+}
+
+skills = defaultdict(list,
+                     {'Advance Data Structures': [],
+                      'Algorithms': [],
+                      'Artificial Intelligence': [],
+                      'Statistics': [],
+                      'Probability Theory': [],
+                      'Machine Learning': ['Clustering',
+                                           'Recommendation System',
+                                           'Reinforcement Learning',
+                                           'Deep Learning',
+                                           'TensorFlow',
+                                           'PyTorch',
+                                           'Scikit-Learn',
+                                           'Data visualization'],
+                      'Languages': ['Python',
+                                    'C',
+                                    'C++',
+                                    'JavaScript',
+                                    ],
+                      'Web Programming': ['HTML',
+                                          'CSS',
+                                          'Flask',
+                                          'Django',
+                                          'Saas',
+                                          'Bootstrap'],
+                      'Arduino': [],
+                      'Competitive Programming': [],
+                      })
