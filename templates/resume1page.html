@@ -35,16 +35,21 @@ Resume
 
             <div class="row">
                 <div class="col-7">
-                    <p>
+                    <a href="https://www.google.com/maps/place/Bokaro+Steel+City,+Jharkhand/@23.6676092,86.0490819,12z/data=!3m1!4b1!4m5!3m4!1s0x39f4230341010871:0xf89f21d9001d5036!8m2!3d23.6692888!4d86.1510944"
+                        target="_blank">
+                        <h4 style="color: black;"><strong>Address</strong></h4>
+                    </a>
                     <address>
                         Bokaro Steel City,
                         Jharkhand, India 827010.
                     </address>
+                    <p>
 
-                    Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
-                    Interested in theoretical details and implementation.
-                    With a good knowledge in Statitics and Data Science.
-                    Also familiar with basic web programming and cross-platform GUI.
+
+                        Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
+                        Interested in theoretical details and implementation.
+                        With a good knowledge in Statitics and Data Science.
+                        Also familiar with basic web programming and cross-platform GUI.
                     </p>
                 </div>
                 <div class="col">
@@ -67,52 +72,21 @@ Resume
 <div class="resume">
     <h1>Education</h1>
     <div class="content">
-        <table class="table" style="margin: 0px;">
+        <dl style="column-count:2 ; column-gap: 40px;">
+            {%for university in education%}
+            <tr>
+                <li>
 
-            <thead class="thead text-left" style="font-size:large">
-                <th scope="col">Institution</th>
-                <th scope="col">Education</th>
-                <th scope="col">Year</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a target="_blank" href="https://micromasters.mit.edu/" target="_blank">MITx</a></td>
-                    <td><a target="_blank" href=https://micromasters.mit.edu/ds/ target="_blank">Micro Masters
-                            in Statitics and Data
-                            Science</a></td>
-                    <td>2021-2022</td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a>
-                    </td>
-                    <td><a target="_blank"
-                            href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
-                            target="_blank">B.Tech Computer Science</a></td>
-                    <td>2018-2022</td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh
-                            Public School</a></td>
-                    <td>Higher Secondary Education</td>
-                    <td>2015-2017</td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="http://www.arspublicschool.com" target="_blank">ARS Public
-                            School</a></td>
-                    <td>
-                        High School
+                    <dt><a style="color:black"
+                            href={{university.website_school}}>{{university.school}}</a>({{university.duration}})</dt>
+                    <dd><a style="color:black" href={{university.website_degree}}>{{university.degree}}</a></dd>
 
 
-                    </td>
-                    <td>2008-2015</td>
-                </tr>
-                <tr>
-                    <td> Sharswati Sishu Vidya Mandir</td>
-                    <td>Elementary School</td>
-                    <td>2005-2008</td>
-                </tr>
-            </tbody>
-        </table>
+                </li>
+            </tr>
+
+            {% endfor %}
+            </ul>
     </div>
 
 </div>
@@ -123,15 +97,17 @@ Resume
     <h1>Achievements</h1>
     <ol class="content " style="column-count:4 ; column-gap: 40px;">
         {% for achievement in achievements %}
-        <li>
-            <dt>{{ achievement.achievement }}</dt>
-            <dd> {{ achievement.description }}
-                {% if achievement.link %}
-                <a target="_blank" href="{{ achievement.link }}">Visit</a>
-                {% endif %}
-            </dd>
+        <tr>
+            <li>
+                <dt>{{ achievement.achievement }}</dt>
+                <dd> {{ achievement.description }}
+                    {% if achievement.link %}
+                    <a target="_blank" href="{{ achievement.link }}">Visit</a>
+                    {% endif %}
+                </dd>
 
-        </li>
+            </li>
+        </tr>
         {% endfor %}
     </ol>
 

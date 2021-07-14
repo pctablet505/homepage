@@ -6,6 +6,7 @@ from skills import skills
 from contacts import contacts
 from achievements import achievements as achievements_list
 import resume1page as r1
+from education import education as edu
 
 app = Flask(__name__)
 
@@ -70,4 +71,4 @@ def resume1page():
     hobbies = ['Digital Arts', 'Tabla Playing', 'Gaming',]
     print(routes)
     return render_template('resume1page.html',  skills=r1.skills, projects=projects_list, contacts=r1.contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates)
+                           achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates,education=edu)
