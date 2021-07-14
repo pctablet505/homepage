@@ -72,3 +72,6 @@ def resume1page():
     print(routes)
     return render_template('resume1page.html',  skills=r1.skills, projects=projects_list, contacts=r1.contacts,
                            achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates,education=edu)
+
+if __name__=='__main__':
+    app.run(debug=True)
