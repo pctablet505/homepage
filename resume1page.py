@@ -74,31 +74,4 @@ contacts = {
 
 }
 
-skills = defaultdict(list,
-                     {'Advance Data Structures': [],
-                      'Algorithms': [],
-                      'Artificial Intelligence': [],
-                      'Statistics': [],
-                      'Probability Theory': [],
-                      'Machine Learning': ['Clustering',
-                                           'Recommendation System',
-                                           'Reinforcement Learning',
-                                           'Deep Learning',
-                                           'TensorFlow',
-                                           'PyTorch',
-                                           'Scikit-Learn',
-                                           'Data visualization'],
-                      'Languages': ['Python',
-                                    'C',
-                                    'C++',
-                                    'JavaScript',
-                                    ],
-                      'Web Programming': ['HTML',
-                                          'CSS',
-                                          'Flask',
-                                          'Django',
-                                          'Saas',
-                                          'Bootstrap'],
-                      'Arduino': [],
-                      'Competitive Programming': [],
-                      })
+from skills import skills

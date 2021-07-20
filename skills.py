@@ -25,6 +25,7 @@ skills = defaultdict(list,
                                           'Django',
                                           'Saas',
                                           'Bootstrap'],
+                      'DBMS': ['SQL'],
                       'Arduino': [],
                       'Competitive Programming': [],
                       })

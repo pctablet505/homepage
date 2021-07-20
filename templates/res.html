@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>
+            Resume
+        </title>
+    </head>
+    <body>
+        <h1>Rahul Kumar</h1>
+        {% for method in contacts%}
+        <a href="{{contacts[method][1]}}" style="font-style:oblique;">{{method}}</a>
+        {% endfor %}
+    </body>
+</html>

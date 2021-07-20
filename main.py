@@ -6,7 +6,7 @@ from skills import skills
 from contacts import contacts
 from achievements import achievements as achievements_list
 import resume1page as r1
-from education import education as edu
+from education import Education, education as edu
 
 app = Flask(__name__)
 
@@ -14,7 +14,7 @@ files = os.listdir(path='./templates')
 routes = []
 for x in files:
     if len(x) >= 5 and x[-5:] == '.html':
-        if x not in ['layout.html','layout_resume.html']:
+        if x not in ['layout.html', 'layout_resume.html']:
             routes.append(x[:-5])
 routes.sort()
 
@@ -68,10 +68,19 @@ def resume():
 
 @app.route('/resume1page')
 def resume1page():
-    hobbies = ['Digital Arts', 'Tabla Playing', 'Gaming',]
+    hobbies = ['Digital Arts', 'Tabla Playing', 'Gaming', ]
     print(routes)
     return render_template('resume1page.html',  skills=r1.skills, projects=projects_list, contacts=r1.contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates,education=edu)
+                           achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates,
+                           education=edu)
 
-if __name__=='__main__':
+
+@app.route('/res')
+def res():
+    hobbies = ['Digital Arts', 'Tabla Playing', 'Gaming', ]
+    return render_template('res.html', skills=skills, projects=projects_list, contacts=contacts,
+                           achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates, edu=edu)
+
+
+if __name__ == '__main__':
     app.run(debug=True)
