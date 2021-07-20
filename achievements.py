@@ -3,6 +3,9 @@ from collections import namedtuple
 Achievement = namedtuple(
     'Achievement', ['achievement', 'description', 'link'])
 achievements = [
+    Achievement('Implemented van Emde Boas Tree',
+                '1st time correct implementation in python in the History',
+                'https://github.com/pctablet505/van-Emde-Boas-Tree'),
     Achievement('World Programming Championship - IIT Mumbai',
                 'Rank 69 | Certificate no 99695',
                 ''),

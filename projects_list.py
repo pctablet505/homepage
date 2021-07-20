@@ -100,4 +100,18 @@ projects_list = [
         'https://cs50.harvard.edu/ai/2020/projects/5/traffic/',
         'https://github.com/pctablet505/Artificial-Intelligence/tree/main/traffic'
 
-    )]
+    ),
+    Project(
+        'CS50 Wiki',
+        'Mini version of WikiPedia with almost all features of wikipedia.',
+        'https://mycs50wiki.herokuapp.com/',
+        ''
+    ),
+    Project(
+        'HomePage',
+        '''My Homepage which contails details about me like hobbies, interests, and many things more.\n
+        ''',
+        'https://pctablet505.herokuapp.com/',
+        ''
+    )
+    ]

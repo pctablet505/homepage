@@ -75,11 +75,6 @@ def resume1page():
                            education=edu)
 
 
-@app.route('/res')
-def res():
-    hobbies = ['Digital Arts', 'Tabla Playing', 'Gaming', ]
-    return render_template('res.html', skills=skills, projects=projects_list, contacts=contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates, edu=edu)
 
 
 if __name__ == '__main__':
