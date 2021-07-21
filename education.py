@@ -35,7 +35,7 @@ education = [
         school='Sharswati Sishu Vidya Mandir',
         website_school='',
         duration='2005-08',
-        degree='High School',
+        degree='Elementary School',
         website_degree='',
     ),
 

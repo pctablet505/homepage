@@ -28,10 +28,10 @@ def index():
     print('\n' * 5)
     return render_template('home.html', routes=routes, os=os, photos=photos, path=path)
 
+@app.route('/about')
+def about():
+    return render_template('about.html', routes=routes,contacts=contacts)
 
-@app.route('/contact')
-def contact():
-    return render_template('contact.html', routes=routes, contacts=contacts)
 
 
 @app.route('/certifications')
@@ -61,18 +61,15 @@ def route(name):
 
 @app.route('/resume')
 def resume():
+    return render_template('resume.html', routes=routes)
+
+
+@app.route('/resume_detailed')
+def resume_detailed():
     hobbies = ['Digital Arts', 'Tabla Playing']
-    return render_template('resume.html', routes=routes, skills=skills, projects=projects_list, contacts=contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=certificates)
-
-
-@app.route('/resume1page')
-def resume1page():
-    hobbies = ['Digital Arts', 'Tabla Playing', 'Gaming', ]
-    print(routes)
-    return render_template('resume1page.html',  skills=r1.skills, projects=projects_list, contacts=r1.contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=r1.certificates,
-                           education=edu)
+    return render_template('resume_detailed.html', routes=routes, skills=skills, projects=projects_list, contacts=contacts,
+                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu)
+    
 
 
 

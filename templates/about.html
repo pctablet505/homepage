@@ -18,7 +18,7 @@ About
     <p>
         <img src="/static/me/3.jpg" style="border:3px solid black; border-radius: 180px; width:180px; height:180px; float:right;margin-right: 200px;">
         Hello everybody I am Rahul.<br>
-        I am a Science student and a programmer.<br>
+        I am a Computer Science student and a programmer.<br>
         I am from <a href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a>,
         <a href="https://www.google.com/maps/place/BIT+Sindri/@23.6548241,86.4709426,16.74z/data=!4m5!3m4!1s0x39f696e95958a6d5:0x7c14e668e6f2feea!8m2!3d23.6568531!4d86.4740646"
             target="_blank">Dhanbad India</a><br>
@@ -26,10 +26,8 @@ About
     <h2>Interests</h2>
     <p>
         My fields of interest are Data Structures, Algorithms, Artificial Intelligence and Machine Learning.
-        I am learning web programming not because I love this thing but because It is an important thing.
-        It helps us to express ourselves and produce something that could be used by common people
-        who aren't programmers.
-        And also because its important to get a job.
+        And I'm also familiar with web programming, simple cross-platform GUI and linux.
+        
     </p>
     <h2>History</h2>
     <p>
@@ -46,6 +44,15 @@ About
         one day I will surely be able to do so.
     </p>
     <div id="map"></div>
+    <h2>Contact</h2>
+    <div id="contact">
+        {% for contact in contacts %}
+        <li>
+            <a href="{{contact.url}}" style="font-style:oblique; color: black; font-size: 1.1em; text-decoration: none; ""><i
+                    class="{{contact.icon}} "></i> {{contact.method}} : {{contact.disp}}</a>
+        </li>
+        {% endfor %}
+    </div>
     
 
 </div>

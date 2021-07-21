@@ -55,12 +55,12 @@ ul {
     text-align: left;
 }
 
-#contact_resume {
+#contact {
     text-align: left;
     margin-top: 0;
 }
 
-#contact_resume li {
+#contact li {
     display: inline-block;
     padding-right: 10px;
 }

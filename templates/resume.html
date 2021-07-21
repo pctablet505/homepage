@@ -4,166 +4,116 @@ Resume
 {% endblock %}
 
 {% block main %}
-<button id="download" onclick="window.open('{{ url_for('static', filename='resume.pdf') }}','_blank')"
+<!-- <button id="download" onclick="window.open('{{ url_for('static', filename='resume.pdf') }}','_blank')"
     class="btn btn-primary">
     Download Resume
-</button>
-<h1 style="font-size: 1in; font-family: Bahnschrift">Rahul Kumar</h1>
-<div class="resume content">
-    <h1>About</h1>
-    <div class="row">
-        <div class="col">
+</button> -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Goblin+One&family=Vast+Shadow&display=swap');
+</style>
 
-            <p>
-                I am a Computer Science engineering student from <a target="_blank" href="https://www.bitsindri.ac.in"
-                    target="_blank">BIT_Sindri</a>.<br>
-                Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
-                And Interested in theoretical details and implementation.
-                With a good knowledge in Statitics and Data Science.
-                Also familiar with basic web programming and GUI.
+<!-- 
+    <h1 style="font-size: .6in; font-family: 'Goblin One', cursive, cursive;">Rahul Kumar</h1>
+<div class="resume">
+    <div class="content">
+        <ul id="contact_resume">
+            {% for method in contacts %}
+            <li>
+                <tr>
+                    <td>
+                        {{ method }}
+                    </td>
+                    <td>
+                        <a target="_blank" href="{{ contacts[method][1] }}" style="font-style:oblique;">{{
+                            contacts[method][0] }}</a>
+                    </td>
+                </tr>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="resume">
 
 
-            </p>
-            <a href="https://www.google.com/maps/place/Bokaro+Steel+City,+Jharkhand/@23.6676092,86.0490819,12z/data=!3m1!4b1!4m5!3m4!1s0x39f4230341010871:0xf89f21d9001d5036!8m2!3d23.6692888!4d86.1510944"
-                target="_blank">
-                <h4 style="color: black;"><strong>Address</strong></h4>
-            </a>
-            <address>
-                Bokaro Steel City,
-                Jharkhand, India 827010.
-            </address>
+            <div class="row">
+                <div class="col-7">
+                    <a href="https://www.google.com/maps/place/Bokaro+Steel+City,+Jharkhand/@23.6676092,86.0490819,12z/data=!3m1!4b1!4m5!3m4!1s0x39f4230341010871:0xf89f21d9001d5036!8m2!3d23.6692888!4d86.1510944"
+                        target="_blank">
+                        <h4 style="color: black;"><strong>Address</strong></h4>
+                    </a>
+                    <address>
+                        Bokaro Steel City,
+                        Jharkhand, India 827010.
+                    </address>
+                    <p>
+
+
+                        Expertise in advance data structures, Artificial Intelligence, algorithms and Machine Learning.
+                        Interested in theoretical details and implementation.
+                        With a good knowledge in Statitics and Data Science.
+                        Also familiar with basic web programming and cross-platform GUI.
+                    </p>
+                </div>
+                <div class="col">
+                    <img src="/static/me/3.jpg"
+                        style="border:3px solid black; border-radius: 50px; width:130px; height:130px; float:center;">
+
+                </div>
+            </div>
+
         </div>
 
-        <div class="col">
-            <img src="/static/me/3.jpg"
-                style="border:3px solid black; border-radius: 200px; width:200px; height:200px; float:right;margin-right: 100px;">
-
-        </div>
     </div>
 
-
 </div>
-<div class="resume">
-    <h1>Contact</h1>
 
-    <ul id="contact_resume">
-        {% for method in contacts %}
-        <li>
-            <tr>
-                <td>
-                    {{ method }}
-                </td>
-                <td>
-                    <a target="_blank" href="{{ contacts[method][1] }}" style="font-style:oblique;">{{
-                        contacts[method][0] }}</a>
-                </td>
-            </tr>
 
-        </li>
-        {% endfor %}
-    </ul>
-    <hr>
-</div>
+
 
 
 <div class="resume">
     <h1>Education</h1>
     <div class="content">
-        <table class="table  table-bordered" style="margin-left:auto; margin-top:0;">
+        <dl style="column-count:2 ; column-gap: 40px;">
+            {%for university in education%}
+            <tr>
+                <li>
 
-            <thead class="thead text-center" style="font-size:large">
-                <th scope="col">Institution</th>
-                <th scope="col">Education</th>
-                <th scope="col">Year</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><a target="_blank" href="https://micromasters.mit.edu/" target="_blank">MITx</a></td>
-                    <td><a target="_blank" href=https://micromasters.mit.edu/ds/ target="_blank">Micro Masters
-                            in Statitics and Data
-                            Science</a></td>
-                    <td>2021-2022</td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a>
-                    </td>
-                    <td><a target="_blank"
-                            href="https://www.bitsindri.ac.in/index.php/departments/computer-science-engineering"
-                            target="_blank">B.Tech Computer Science</a></td>
-                    <td>2018-2022</td>
-                </tr>                
-                <tr>
-                    <td><a target="_blank" href="https://www.ggpsbokaro.org/" target="_blank">Guru Gobind Singh
-                            Public School</a></td>
-                    <td>Higher Secondary Education</td>
-                    <td>2015-2017</td>
-                </tr>
-                <tr>
-                    <td><a target="_blank" href="http://www.arspublicschool.com" target="_blank">ARS Public
-                            School</a></td>
-                    <td>
-                        <ul>
+                    <dt><a style="color:black"
+                            href={{university.website_school}}>{{university.school}}</a>({{university.duration}})</dt>
+                    <dd><a style="color:black" href={{university.website_degree}}>{{university.degree}}</a></dd>
 
-                            <li>High School</li>
-                            <li>Middle School</li>
 
-                        </ul>
-                    </td>
-                    <td>2008-2015</td>
-                </tr>
-                <tr>
-                    <td> Sharswati Sishu Vidya Mandir</td>
-                    <td>Elementary School</td>
-                    <td>2005-2008</td>
-                </tr>
-            </tbody>
-        </table>
+                </li>
+            </tr>
+
+            {% endfor %}
+            </ul>
     </div>
 
-    <hr>
-</div>
-
-<div class="resume content">
-    <div class="row ">
-        <div class="col-12 col-md-6">
-            <div class="resume">
-                <h1>Skills</h1>
-                <ol>
-                    {% for skill in skills %}
-                    <li>{{ skill }}</li>
-                    <ul class="skills">
-                        {% for sub_skill in skills[skill] %}
-                        <li>{{ sub_skill }}</li>
-                        {% endfor %}
-                    </ul>
-
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-        <div class="col-12 col-md-6">
-            <div class="resume">
-                <h1>Achievements</h1>
-                <ol class="list-group">
-                    {% for achievement in achievements %}
-                    <li>
-                        <dt>{{ achievement.achievement }}</dt>
-                        <dd> {{ achievement.description }}
-                            {% if achievement.link %}
-                            <a target="_blank" href="{{ achievement.link }}">Visit</a>
-                            {% endif %}
-                        </dd>
-
-                    </li>
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-    </div>
-    <hr>
 </div>
 
 
+
+<div class="resume">
+    <h1>Achievements</h1>
+    <ol class="content " style="column-count:4 ; column-gap: 40px;">
+        {% for achievement in achievements %}
+        <tr>
+            <li>
+                <dt>{{ achievement.achievement }}</dt>
+                <dd> {{ achievement.description }}
+                    {% if achievement.link %}
+                    <a target="_blank" href="{{ achievement.link }}">Visit</a>
+                    {% endif %}
+                </dd>
+
+            </li>
+        </tr>
+        {% endfor %}
+    </ol>
+
+</div>
 
 
 
@@ -171,18 +121,35 @@ Resume
 
 <div class="resume">
     <h1>Certifications</h1>
-
-    <ul class="content3 ">
+    <ul class="content " style="column-count:2 ;">
         {% for certificate in certificates %}
-        <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
+        <dt>
+            <li><a style="color:black" target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a>
+            </li>
+        </dt>
+        <dd>{{certificate.organization}}</dd>
         {% endfor %}
     </ul>
-    <hr>
-
 </div>
 <div class="resume">
+    <h1>Skills</h1>
+    <ul class="content " style="column-count:6 ; column-gap: 30px;">
+        {% for skill in skills %}
+        <li>{{ skill }}</li>
+
+        {% for sub_skill in skills[skill] %}
+        <li>{{ sub_skill }}</li>
+        {% endfor %}
+
+
+        {% endfor %}
+    </ul>
+
+</div>
+
+<div class="resume">
     <h1>Projects</h1>
-    <ol class="content2 ">
+    <ol class="content " style="column-count:3 ;">
         {% for project in projects %}
         <li>
 
@@ -193,15 +160,16 @@ Resume
 
         {% endfor %}
     </ol>
-    <hr>
+
 </div>
 <div class="resume">
     <h1>Hobbies</h1>
-    <ul class="content">
+    <ul class="content" style="column-count: 3;">
         {% for hobby in hobbies %}
         <li>{{ hobby }}</li>
         {% endfor %}
     </ul>
-</div>
+</div> -->
+<embed src="/static/resume1page.pdf" width="100%" height="1500">
 
 {% endblock %}
