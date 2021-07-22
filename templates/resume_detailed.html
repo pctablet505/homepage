@@ -126,11 +126,30 @@ Resume
 
 
 <div class="resume">
+    <style>
+        a img{
+            display: none;
+        }
+        li a:hover img{
+            display: block;
+            position:absolute;
+            transform: translate(50px,-40px);
+            z-index: 99999;
+        }
+    </style>
     <h1>Certifications</h1>
 
     <ul class="content3 ">
         {% for certificate in certificates %}
-        <li><a target="_blank" href="{{ certificate.credential }}">{{ certificate.title }}</a></li>
+        
+            <li><a target="_blank" href="{{ certificate.credential }}">
+                
+                    <img src="{{certificate['src']}}"" width="400px" height="400px">
+                
+                {{ certificate.title }}</a>
+            </li>
+        
+        
         {% endfor %}
     </ul>
     <hr>
