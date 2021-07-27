@@ -14,7 +14,7 @@ files = os.listdir(path='./templates')
 routes = []
 for x in files:
     if len(x) >= 5 and x[-5:] == '.html':
-        if x not in ['layout.html', 'layout_resume.html']:
+        if x not in ['layout.html', 'layout_resume.html','resume_download.html']:
             routes.append(x[:-5])
 routes.sort()
 
@@ -68,6 +68,12 @@ def resume():
 def resume_detailed():
     hobbies = ['Digital Arts', 'Tabla Playing']
     return render_template('resume_detailed.html', routes=routes, skills=skills, projects=projects_list, contacts=contacts,
+                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu)
+
+@app.route('/resume_download')
+def resume_download():
+    hobbies = ['Digital Arts', 'Tabla Playing']
+    return render_template('resume_download.html', skills=skills, projects=projects_list, contacts=contacts,
                            achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu)
     
 

@@ -5,8 +5,7 @@ Resume
 
 {% block main %}
 
-<button id="download" onclick="window.open('{{ url_for('static', filename='resume.pdf') }}','_blank')"
-    class="btn btn-primary">
+<button id="download" onclick="window.open('{{url_for('resume_download')}}','_blank')" class="btn btn-primary">
     Download Resume
 </button>
 <h1 style="font-size: 1in; font-family: Bahnschrift">Rahul Kumar</h1>
@@ -46,11 +45,14 @@ Resume
 </div>
 <div class="resume">
     <h1>Contact</h1>
-    
+
     <ul id="contact" class="content">
         {% for contact in contacts %}
         <li>
-                <a target="_blank" href="{{contact.url }}" style="color: black; text-decoration: none;"><i class=" {{contact.icon}}"></i>&nbsp;<!-- {{contact.method}}: --> {{contact.disp}}</a>
+            <a target="_blank" href="{{contact.url }}" style="color: black; text-decoration: none;"><i
+                    class=" {{contact.icon}}"></i>&nbsp;
+                <!-- {{contact.method}}: --> {{contact.disp}}
+            </a>
         </li>
         {% endfor %}
     </ul>
@@ -70,12 +72,14 @@ Resume
             <tbody>
                 {% for university in education %}
                 <tr>
-                    <td><a style="color:black;" target="_blank" href="{{university.website_school}}" target="_blank"><strong>{{university.school}}</strong></a></td>
-                    <td><a target="_blank" href="{{university.website_degree}}" target="_blank"><em>{{university.degree}}</em></a></td>
+                    <td><a style="color:black;" target="_blank" href="{{university.website_school}}"
+                            target="_blank"><strong>{{university.school}}</strong></a></td>
+                    <td><a target="_blank" href="{{university.website_degree}}"
+                            target="_blank"><em>{{university.degree}}</em></a></td>
                     <td>2021-2022</td>
                 </tr>
                 {%endfor%}
-                
+
             </tbody>
         </table>
     </div>
@@ -127,13 +131,14 @@ Resume
 
 <div class="resume">
     <style>
-        a img{
+        a img {
             display: none;
         }
-        li a:hover img{
+
+        li a:hover img {
             display: block;
-            position:absolute;
-            transform: translate(50px,-40px);
+            position: absolute;
+            transform: translate(50px, -40px);
             z-index: 99999;
         }
     </style>
@@ -141,15 +146,15 @@ Resume
 
     <ul class="content3 ">
         {% for certificate in certificates %}
-        
-            <li><a target="_blank" href="{{ certificate.credential }}">
-                
-                    <img src="{{certificate['src']}}"" width="400px" height="400px">
-                
+
+        <li><a target="_blank" href="{{ certificate.credential }}">
+
+                <img src="{{certificate['src']}}"" width=" 400px" height="400px">
+
                 {{ certificate.title }}</a>
-            </li>
-        
-        
+        </li>
+
+
         {% endfor %}
     </ul>
     <hr>
