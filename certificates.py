@@ -4,7 +4,7 @@ Certificate = namedtuple('Certificate', ['credential', 'src', 'title'])
 
 certificates = [
     Certificate(credential='https://courses.edx.org/certificates/8cbde197f6874661ab8794d753f9fd7b',
-                src='static/certificates/MIT 6.86x.png', title='MIT Machine Learning with Python-From Linear Models to Deep Learning'),
+                src='static/certificates/MIT 6.86x.jpg', title='MIT Machine Learning with Python-From Linear Models to Deep Learning'),
     Certificate(credential='https://cs50.harvard.edu/certificates/2b1773c1-473d-4a7b-89ae-460d23154126',
                 src='static/certificates/CS50 AI.png', title='CS50 Introduction to Artificial Intelligence with Python'),
     Certificate(credential='https://www.coursera.org/account/accomplishments/certificate/UA73U5EJC6XJ',
