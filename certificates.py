@@ -9,6 +9,8 @@ certificates = [
                 src='static/certificates/CS50 AI.png', title='CS50 Introduction to Artificial Intelligence with Python'),
     Certificate(credential='https://www.coursera.org/account/accomplishments/certificate/UA73U5EJC6XJ',
                 src='static/certificates/IBM Introductioin to AI.png', title='IBM Introductioin to AI'),
+    Certificate(credential='https://www.coursera.org/account/accomplishments/verify/YSE63GF4U76Q',
+                src='static/certificates/IBM Python.PNG', title='IBM Python for Data Science, AI & Development'),
     Certificate(credential='http://ude.my/UC-d7c52c49-464f-4b63-a9b4-2da5d4c53ff4/',
                 src='static/certificates/Machine Learning.jpg', title='Udemy Complete 2020 Data Science & Machine Learning Bootcamp'),
     Certificate(credential='https://www.hackerrank.com/certificates/58d066424a1e',
