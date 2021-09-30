@@ -14,7 +14,7 @@ achievements = [
                 'https://www.hackerrank.com/reslits/hackerrank-hackfest-2020/pctablet505'),
     Achievement('GATE 2021',
                 '''Got AIR 5648''',
-                ''),
+                '/static/gate2021.png'),
     Achievement('CodeVita Season 9',
                 '''Cleared Round 1 with Rank 1042''',
                 ''),
