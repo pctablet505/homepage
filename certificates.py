@@ -3,6 +3,8 @@ from collections import namedtuple
 Certificate = namedtuple('Certificate', ['credential', 'src', 'title'])
 
 certificates = [
+    Certificate(credential='https://courses.edx.org/certificates/bf4ea7cb34a742cea00c770801d1947d',
+                src='static/certificates/MITx 6.419x.png', title='MIT Data Analysis: Statistical Modelling and Computation in Application'),
     Certificate(credential='https://courses.edx.org/certificates/3c59035943454549990f2d2de7f49e9f',
                 src='/static/certificates/MITx 18.6501x Fundamentals of statistics.png', title='MIT Fundamentals of Statistics'),
     Certificate(credential='https://courses.edx.org/certificates/45213294fe2649c5a5954e4c42a70f13',
