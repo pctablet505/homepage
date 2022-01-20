@@ -7,6 +7,7 @@ from contacts import contacts
 from achievements import achievements as achievements_list
 import resume1page as r1
 from education import Education, education as edu
+from experience import experience
 
 app = Flask(__name__)
 
@@ -68,13 +69,13 @@ def resume():
 def resume_detailed():
     hobbies = ['Digital Arts', 'Tabla Playing']
     return render_template('resume_detailed.html', routes=routes, skills=skills, projects=projects_list, contacts=contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu)
+                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu,experience=experience)
 
 @app.route('/resume_download')
 def resume_download():
     hobbies = ['Digital Arts', 'Tabla Playing']
     return render_template('resume_download.html', skills=skills, projects=projects_list, contacts=contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu)
+                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu,experience=experience)
     
 
 
