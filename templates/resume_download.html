@@ -93,6 +93,7 @@
         
                     <thead class="thead text-center" style="font-size:large">
                         <th scope="col">Company</th>
+                        <th scope="col">Location</th>
                         <th scope="col">Description</th>
                         <th scope="col">Duration</th>
                     </thead>
@@ -101,7 +102,8 @@
                         <tr>
                             <td><a style="color:black;" target="_blank" href="{{company.website}}"
                                     target="_blank"><strong>{{company.company}}</strong></a></td>
-                            <td><em>{{company.description}}</em></td>
+                            <td>{{company.location}}</td>
+                            <td>{{company.description}}</td>
                             <td>{{company.duration}}</td>
                         </tr>
                         {%endfor%}
