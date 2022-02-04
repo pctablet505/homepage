@@ -15,7 +15,7 @@ files = os.listdir(path='./templates')
 routes = []
 for x in files:
     if len(x) >= 5 and x[-5:] == '.html':
-        if x not in ['layout.html', 'layout_resume.html','resume_download.html']:
+        if x not in ['layout.html', 'layout_resume.html', 'resume_download.html']:
             routes.append(x[:-5])
 routes.sort()
 
@@ -29,10 +29,10 @@ def index():
     print('\n' * 5)
     return render_template('home.html', routes=routes, os=os, photos=photos, path=path)
 
+
 @app.route('/about')
 def about():
-    return render_template('about.html', routes=routes,contacts=contacts)
-
+    return render_template('about.html', routes=routes, contacts=contacts)
 
 
 @app.route('/certifications')
@@ -69,16 +69,14 @@ def resume():
 def resume_detailed():
     hobbies = ['Digital Arts', 'Tabla Playing']
     return render_template('resume_detailed.html', routes=routes, skills=skills, projects=projects_list, contacts=contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu,experience=experience)
+                           achievements=achievements_list, hobbies=hobbies, certificates=certificates, education=edu, experience=experience)
+
 
 @app.route('/resume_download')
 def resume_download():
     hobbies = ['Digital Arts', 'Tabla Playing']
     return render_template('resume_download.html', skills=skills, projects=projects_list, contacts=contacts,
-                           achievements=achievements_list, hobbies=hobbies, certificates=certificates,education=edu,experience=experience)
-    
-
-
+                           achievements=achievements_list, hobbies=hobbies, certificates=certificates, education=edu, experience=experience)
 
 
 if __name__ == '__main__':

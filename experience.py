@@ -1,7 +1,7 @@
 from collections import namedtuple
 
 Experience = namedtuple('Experience',
-                       ('company','location' ,'website', 'duration', 'description'))
+                        ('company', 'location', 'website', 'duration', 'description'))
 experience = [
     Experience(
         company='Samsung R&D Institute India',

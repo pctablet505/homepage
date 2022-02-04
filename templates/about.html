@@ -5,9 +5,9 @@ About
 {% block main %}
 
 <script>
-    function displaymap(){
-        var map=document.getElementById("map");
-        map.innerHTML='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116935.61006198269!2d86.04908207609994!3d23.667451960339346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4230341010871%3A0xf89f21d9001d5036!2sBokaro%20Steel%20City%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1619378003465!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
+    function displaymap() {
+        var map = document.getElementById("map");
+        map.innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116935.61006198269!2d86.04908207609994!3d23.667451960339346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4230341010871%3A0xf89f21d9001d5036!2sBokaro%20Steel%20City%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1619378003465!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
     }
 </script>
 
@@ -16,20 +16,21 @@ About
 <div class="bordered">
     <h2>Present Details</h2>
     <p>
-        <img src="/static/me/3.jpg" style="border:3px solid black; border-radius: 180px; width:180px; height:180px; float:right;margin-right: 200px;">
+        <img src="/static/me/3.jpg"
+            style="border:3px solid black; border-radius: 180px; width:180px; height:180px; float:right;margin-right: 200px;">
         Hello everybody I am Rahul.<br>
-        I am a Computer Science student and a programmer from 
+        I am a Computer Science student and a programmer from
         <a href="https://www.bitsindri.ac.in" target="_blank">BIT Sindri</a>,
         <a href="https://www.google.com/maps/place/BIT+Sindri/@23.6548241,86.4709426,16.74z/data=!4m5!3m4!1s0x39f696e95958a6d5:0x7c14e668e6f2feea!8m2!3d23.6568531!4d86.4740646"
             target="_blank">Dhanbad India</a><br>
         And I'm currently I'm working as an Intern at Samsung R&D Institute, Noida.
-        
+
     </p>
     <h2>Interests</h2>
     <p>
         My fields of interest are Data Structures, Algorithms, Artificial Intelligence and Machine Learning.
         And I'm also familiar with web programming, simple cross-platform GUI and linux.
-        
+
     </p>
     <h2>History</h2>
     <p>
@@ -50,8 +51,9 @@ About
     <div id="contact">
         {% for contact in contacts %}
         <li>
-            <a href="{{contact.url}}" style="font-style:oblique; color: black; font-size: 1.1em; text-decoration: none; ""><i
-                    class="{{contact.icon}} "></i> {{contact.method}} : {{contact.disp}}</a>
+            <a href="{{contact.url}}"
+                style="font-style:oblique; color: black; font-size: 1.1em; text-decoration: none; ""><i
+                    class=" {{contact.icon}} "></i> {{contact.method}} : {{contact.disp}}</a>
         </li>
         {% endfor %}
     </div>
