@@ -6,13 +6,13 @@ pctablet505
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
-        
+
         <div class="carousel-item active" data-bs-interval="5000">
             <img src={{path}}/{{photos[0]}} class="d-block w-100" alt="{{0}}">
         </div>
         {% for src in photos[1:] %}
         <div class="carousel-item" data-bs-interval="5000">
-            <img src={{path}}/{{src}} class="d-block w-100" alt="{{src}}">
+            <img src={{path}}/{{src}} class="d-block w-100 h-100" alt="{{src}}">
         </div>
         {% endfor %}
     </div>

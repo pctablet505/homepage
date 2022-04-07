@@ -1,23 +1,23 @@
 {% extends "layout.html" %}
 {% block title %}
-    Achievements
+Achievements
 {% endblock %}
 {% block main %}
-    <h1 class="underlined">My Achievements</h1>
+<h1 class="underlined">My Achievements</h1>
 
-    <ul class="list-group text-center bordered">
-        {% for achievement in achievements %}
-            <li>
-                <dt>{{ achievement.achievement }}</dt>
-                <dd> {{ achievement.description }}
-                    {% if achievement.link %}
-                        <a href="{{ achievement.link }}">Visit</a>
-                    {% endif %}
-                </dd>
+<ul class="list-group text-center bordered">
+    {% for achievement in achievements %}
+    <li>
+        <dt>{{ achievement.achievement }}</dt>
+        <dd> {{ achievement.description }}
+            {% if achievement.link %}
+            <a href="{{ achievement.link }}">Visit</a>
+            {% endif %}
+        </dd>
 
-            </li>
-        {% endfor %}
-    </ul>
+    </li>
+    {% endfor %}
+</ul>
 
 
 {% endblock %}
