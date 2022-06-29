@@ -9,4 +9,10 @@ experience = [
         website='https://research.samsung.com/sri-n',
         duration='Jan 2022-Present',
         description='Intern'),
+    Experience(
+        company='Samsung R&D Institute India',
+        location='Noida',
+        website='https://research.samsung.com/sri-n',
+        duration='Jan 2022-Present',
+        description='R&D Engineer'),
 ]
